@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:onClick="onClick">
+    <PreferenceCategory android:title="School">
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notification_header">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="blacklist"
+            android:title="Whitelist - Blacklist"
+            app:summaryOff="Whitelist"
+            app:summaryOn="Blacklist"
+            app:title="Whitelist - Blacklist" />
+        <EditTextPreference
+            android:key="listBlacklist"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:title="List (separate with commas)"
+            app:useSimpleSummaryProvider="true" />
+        <com.example.codelunch.preference.TimePreference
+            android:title="Time"
+            app:key="time" />
+        <com.example.codelunch.preference.ButtonPreference
+            android:title="Send now"
+            app:key="sendButton" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
